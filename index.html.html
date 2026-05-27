@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahma Ice Water – The Taste of Purity</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #041c2c;
+    --deep-blue: #083a5c;
+    --ocean: #0e6493;
+    --sky: #2196c4;
+    --ice: #a8ddf0;
+    --frost: #e4f4fb;
+    --gold: #c89a2e;
+    --gold-light: #f0c84a;
+    --white: #ffffff;
+    --off-white: #f7fbfe;
+    --text-dark: #0d1f2d;
+    --text-mid: #3a5a72;
+    --text-light: #6a8fa8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-dark);
+    background: var(--off-white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(4, 28, 44, 0.96);
+    backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 6vw;
+    height: 68px;
+    border-bottom: 1px solid rgba(168, 221, 240, 0.12);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    font-weight: 900;
+    color: var(--gold-light);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--ice); font-weight: 400; font-style: italic; }
+
+  .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.72);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.25s;
+  }
+
+  .nav-links a:hover { color: var(--gold-light); }
+
+  .nav-cta {
+    background: var(--ocean);
+    color: var(--white) !important;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: background 0.25s !important;
+  }
+
+  .nav-cta:hover { background: var(--sky) !important; color: var(--white) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(160deg, var(--navy) 0%, var(--deep-blue) 50%, #0b3e58 100%);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding: 100px 6vw 60px;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; bottom: -120px; right: -80px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(33,150,196,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute; top: -60px; left: 30%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(14,100,147,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 680px;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 36px; height: 1px;
+    background: var(--gold-light);
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 1.6rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--ice);
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: rgba(168, 221, 240, 0.85);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 2.6rem;
+    font-weight: 300;
+  }
+
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 34px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.25s, transform 0.2s;
+    border: none; cursor: pointer;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--ice);
+    padding: 14px 34px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 0.92rem;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    border: 1.5px solid rgba(168,221,240,0.45);
+    transition: border-color 0.25s, color 0.25s;
+  }
+
+  .btn-outline:hover { border-color: var(--ice); color: var(--white); }
+
+  .hero-badges {
+    position: absolute; right: 6vw; top: 50%;
+    transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 18px;
+    z-index: 2;
+  }
+
+  .badge-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(168,221,240,0.18);
+    border-radius: 16px;
+    padding: 18px 22px;
+    text-align: center;
+    min-width: 160px;
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s;
+  }
+
+  .badge-card:hover { transform: translateY(-3px); }
+
+  .badge-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .badge-card .label {
+    font-size: 0.78rem;
+    color: var(--ice);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── WAVE DIVIDER ── */
+  .wave-divider {
+    display: block; width: 100%;
+    background: var(--navy);
+    line-height: 0;
+  }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 90px 6vw; }
+
+  .section-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--ocean);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .section-tag::before {
+    content: '';
+    display: block; width: 24px; height: 2px;
+    background: var(--ocean); border-radius: 2px;
+  }
+
+  h2.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    font-size: 1.02rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-width: 560px;
+    font-weight: 300;
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--white);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .about-visual {
+    background: linear-gradient(135deg, var(--frost), var(--ice));
+    border-radius: 24px;
+    padding: 50px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-visual::before {
+    content: '';
+    position: absolute; bottom: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: rgba(33,150,196,0.15);
+    border-radius: 50%;
+  }
+
+  .about-visual .big-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--deep-blue);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .about-visual .big-label {
+    font-size: 0.85rem;
+    color: var(--ocean);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .about-visual .divider { width: 48px; height: 2px; background: var(--gold); margin: 20px auto; }
+
+  .about-facts { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+
+  .fact-item {
+    background: rgba(4,28,44,0.06);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+
+  .fact-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: var(--ocean);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px; color: white;
+  }
+
+  .fact-text { font-size: 0.88rem; color: var(--text-dark); line-height: 1.55; }
+  .fact-text strong { color: var(--deep-blue); font-weight: 600; display: block; margin-bottom: 2px; }
+
+  /* ── PROCESS ── */
+  .process { background: var(--off-white); }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+  }
+
+  .step-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 36px 28px;
+    border: 1px solid rgba(14,100,147,0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(14,100,147,0.12);
+  }
+
+  .step-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: var(--frost);
+    position: absolute;
+    top: 12px; right: 20px;
+    line-height: 1;
+    user-select: none;
+  }
+
+  .step-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, var(--ocean), var(--sky));
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; color: white;
+    margin-bottom: 20px;
+  }
+
+  .step-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .step-card p {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  /* ── PRODUCTS ── */
+  .products { background: var(--navy); }
+
+  .products .section-tag { color: var(--gold-light); }
+  .products .section-tag::before { background: var(--gold-light); }
+  .products h2.section-title { color: var(--white); }
+  .products .section-sub { color: rgba(168,221,240,0.8); }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 60px;
+  }
+
+  .product-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(168,221,240,0.12);
+    border-radius: 18px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .product-card:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-4px);
+  }
+
+  .product-vol {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .product-unit {
+    font-size: 0.8rem;
+    color: var(--ice);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+
+  .product-bottle {
+    font-size: 3.2rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .product-name {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+
+  .brand-note {
+    margin-top: 50px;
+    background: rgba(168,221,240,0.07);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 28px;
+    color: rgba(168,221,240,0.85);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 700px;
+  }
+
+  .brand-note strong { color: var(--gold-light); }
+
+  /* ── COMPOSITION ── */
+  .composition { background: var(--white); }
+
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .comp-table th {
+    background: var(--deep-blue);
+    color: var(--ice);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 18px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .comp-table th:first-child { border-radius: 10px 0 0 0; }
+  .comp-table th:last-child { border-radius: 0 10px 0 0; }
+
+  .comp-table td {
+    padding: 13px 18px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--frost);
+    color: var(--text-dark);
+  }
+
+  .comp-table tr:nth-child(even) td { background: var(--frost); }
+
+  .comp-table td:last-child { font-weight: 600; color: var(--ocean); }
+
+  .ph-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--ocean), var(--sky));
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+    margin-top: 4px;
+  }
+
+  .comp-side { }
+
+  .comp-side h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .comp-side p {
+    font-size: 0.92rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+
+  .tds-bar {
+    background: var(--frost);
+    border-radius: 30px;
+    height: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+
+  .tds-fill {
+    background: linear-gradient(90deg, var(--ocean), var(--sky));
+    height: 100%;
+    width: 14%; /* TDS 28 out of ~200 ideal max */
+    border-radius: 30px;
+  }
+
+  .tds-label { font-size: 0.78rem; color: var(--text-light); margin-top: 4px; }
+
+  /* ── VALUES ── */
+  .values { background: var(--frost); }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 60px;
+  }
+
+  .value-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 32px 26px;
+    border-top: 3px solid var(--ocean);
+    transition: transform 0.25s;
+  }
+
+  .value-card:hover { transform: translateY(-4px); }
+
+  .value-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+    margin-top: 14px;
+  }
+
+  .value-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.7; }
+
+  .value-icon {
+    font-size: 1.8rem;
+  }
+
+  /* ── DELIVERY ── */
+  .delivery { background: var(--white); }
+
+  .delivery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .delivery-feature {
+    display: flex; gap: 18px; margin-bottom: 30px; align-items: flex-start;
+  }
+
+  .del-icon {
+    width: 48px; height: 48px;
+    background: var(--frost);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    border: 1px solid rgba(14,100,147,0.12);
+  }
+
+  .del-content h4 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 5px;
+  }
+
+  .del-content p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; }
+
+  .vehicle-strip {
+    background: linear-gradient(135deg, var(--deep-blue), var(--ocean));
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    color: white;
+  }
+
+  .vehicle-strip h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--white);
+  }
+
+  .vehicle-strip p { font-size: 0.9rem; color: var(--ice); line-height: 1.7; margin-bottom: 24px; }
+
+  .vehicles-row {
+    display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+  }
+
+  .vehicle-item {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.88);
+    border: 1px solid rgba(255,255,255,0.12);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── MISSION ── */
+  .mission-section {
+    background: linear-gradient(160deg, var(--deep-blue), var(--navy));
+    text-align: center;
+    padding: 90px 6vw;
+  }
+
+  .mission-section .section-tag { color: var(--gold-light); justify-content: center; }
+  .mission-section .section-tag::before { background: var(--gold-light); }
+
+  .mission-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    color: var(--white);
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.3;
+  }
+
+  .mission-section p {
+    font-size: 1rem;
+    color: rgba(168,221,240,0.85);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.85;
+    font-weight: 300;
+  }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--off-white); }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    margin-top: 60px;
+  }
+
+  .contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 24px;
+  }
+
+  .contact-item {
+    display: flex; gap: 16px; margin-bottom: 22px; align-items: flex-start;
+  }
+
+  .ci-icon {
+    width: 44px; height: 44px;
+    background: var(--deep-blue);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    color: var(--ice);
+    flex-shrink: 0;
+  }
+
+  .ci-body { }
+  .ci-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 4px; font-weight: 600; }
+  .ci-value { font-size: 0.95rem; color: var(--text-dark); font-weight: 500; line-height: 1.5; }
+
+  .contact-form { background: var(--white); border-radius: 20px; padding: 38px 36px; border: 1px solid rgba(14,100,147,0.1); }
+
+  .contact-form h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 24px;
+  }
+
+  .form-group { margin-bottom: 18px; }
+
+  .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text-mid); margin-bottom: 6px; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    border: 1.5px solid rgba(14,100,147,0.15);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.92rem;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-dark);
+    background: var(--off-white);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: var(--ocean);
+    background: var(--white);
+  }
+
+  .form-group textarea { height: 100px; resize: vertical; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--deep-blue);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.02em;
+    transition: background 0.25s, transform 0.2s;
+    margin-top: 6px;
+  }
+
+  .submit-btn:hover { background: var(--ocean); transform: translateY(-1px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    padding: 50px 6vw 30px;
+    border-top: 1px solid rgba(168,221,240,0.08);
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+  }
+
+  .footer-brand { }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--gold-light);
+  }
+
+  .footer-logo span { color: var(--ice); font-weight: 400; font-style: italic; }
+
+  .footer-tagline {
+    font-size: 0.78rem;
+    color: rgba(168,221,240,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin: 8px 0 16px;
+    font-weight: 600;
+  }
+
+  .footer-desc { font-size: 0.87rem; color: rgba(168,221,240,0.6); line-height: 1.8; max-width: 320px; }
+
+  .footer-col h4 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ice);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .footer-col a {
+    display: block;
+    color: rgba(168,221,240,0.55);
+    text-decoration: none;
+    font-size: 0.87rem;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--gold-light); }
+
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid rgba(168,221,240,0.08);
+    padding-top: 24px;
+    font-size: 0.8rem;
+    color: rgba(168,221,240,0.35);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .float-anim { animation: float 4s ease-in-out infinite; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up { animation: fadeUp 0.7s ease forwards; }
+  .delay-1 { animation-delay: 0.15s; opacity: 0; }
+  .delay-2 { animation-delay: 0.3s; opacity: 0; }
+  .delay-3 { animation-delay: 0.45s; opacity: 0; }
+  .delay-4 { animation-delay: 0.6s; opacity: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-badges { display: none; }
+    .about-grid, .comp-grid, .delivery-grid, .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-steps, .values-grid { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+    nav .nav-links { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .products-grid, .process-steps, .values-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Rahma <span>ice</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#delivery">Delivery</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow fade-up">Kenya's Pure Water Choice</div>
+    <h1 class="fade-up delay-1">The Taste of<br><em>Purity</em></h1>
+    <p class="hero-sub fade-up delay-2">
+      Premium reverse osmosis purified water bottled at source in Mombasa County. Trusted by homes, offices, and businesses across the Kenyan Coast.
+    </p>
+    <div class="hero-btns fade-up delay-3">
+      <a href="#products" class="btn-primary">Our Products</a>
+      <a href="#contact" class="btn-outline">Order Now</a>
+    </div>
+  </div>
+
+  <div class="hero-badges fade-up delay-4">
+    <div class="badge-card float-anim">
+      <div class="num">RO</div>
+      <div class="label">Reverse Osmosis</div>
+    </div>
+    <div class="badge-card float-anim" style="animation-delay: 0.5s">
+      <div class="num">7.0</div>
+      <div class="label">pH Balanced</div>
+    </div>
+    <div class="badge-card float-anim" style="animation-delay: 1s">
+      <div class="num">28</div>
+      <div class="label">TDS mg/L</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-tag">Who We Are</div>
+  <h2 class="section-title">Pure Water from the<br>Heart of the Kenyan Coast</h2>
+  <p class="section-sub">Rahma Ice Water Company is located 22km North of Mombasa City along the Mombasa–Malindi Highway, off Sun and Sand Beach Resort.</p>
+
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="big-text">22km</div>
+      <div class="big-label">North of Mombasa City</div>
+      <div class="divider"></div>
+      <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--deep-blue); font-style:italic; margin-bottom:6px;">Mombasa–Malindi Highway</div>
+      <div style="font-size:0.82rem; color:var(--ocean); font-weight:500;">off Sun and Sand Beach Resort</div>
+    </div>
+
+    <div>
+      <div class="about-facts">
+        <div class="fact-item">
+          <div class="fact-icon">📍</div>
+          <div class="fact-text">
+            <strong>Our Location</strong>
+            P.O. Box 98962-80100, Mombasa, Kenya. Conveniently situated along a major coastal route.
+          </div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon">🏭</div>
+          <div class="fact-text">
+            <strong>State-of-the-Art Plant</strong>
+            One of the most modern water processing facilities of its kind in Kenya, operating at full capacity to serve local and international markets.
+          </div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon">✅</div>
+          <div class="fact-text">
+            <strong>Quality Certified</strong>
+            NEMA approved and committed to environmental sustainability. Every bottle meets rigorous quality control and international standards.
+          </div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon">💧</div>
+          <div class="fact-text">
+            <strong>Our Mission</strong>
+            To provide reliable, quality water to reduce the global healthy water crisis at a commercial and environmental sustainable level.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-tag">How We Do It</div>
+  <h2 class="section-title">From Source to Your<br>Door, Perfectly Pure</h2>
+  <p class="section-sub">Every drop passes through a rigorous multi-stage purification process to guarantee the highest water quality.</p>
+
+  <div class="process-steps">
+    <div class="step-card">
+      <div class="step-number">01</div>
+      <div class="step-icon">🔬</div>
+      <h3>Reverse Osmosis</h3>
+      <p>Water is forced under pressure through a semi-permeable membrane, retaining no salts, organic impurities, particles, or bacteria while allowing pure water molecules to pass through.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">02</div>
+      <div class="step-icon">🦠</div>
+      <h3>Micro-Filtration & UV</h3>
+      <p>After RO treatment, water passes through micro-filters and UV treatment to eliminate all viruses, bacteria, and any remaining substances affecting colour, taste, or smell.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">03</div>
+      <div class="step-icon">🧴</div>
+      <h3>Bottle Hygiene</h3>
+      <p>Our industrial bottle washing machines disinfect and clean every bottle internally before filling, ensuring complete hygiene and a safe, contaminant-free product.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="section-tag">Our Range</div>
+  <h2 class="section-title">A Size for Every Need</h2>
+  <p class="section-sub">From personal sport caps to large-scale dispensers — premium purity in every format.</p>
+
+  <div class="products-grid">
+    <div class="product-card">
+      <span class="product-bottle">🥤</span>
+      <div class="product-vol">300</div>
+      <div class="product-unit">ml · Sport Cap</div>
+      <div class="product-name">On-the-Go</div>
+    </div>
+    <div class="product-card">
+      <span class="product-bottle">🍶</span>
+      <div class="product-vol">500</div>
+      <div class="product-unit">ml · Sport Cap</div>
+      <div class="product-name">Personal Size</div>
+    </div>
+    <div class="product-card">
+      <span class="product-bottle">🧴</span>
+      <div class="product-vol">1.5</div>
+      <div class="product-unit">Litres · Disposal</div>
+      <div class="product-name">Family Bottle</div>
+    </div>
+    <div class="product-card">
+      <span class="product-bottle">🪣</span>
+      <div class="product-vol">5</div>
+      <div class="product-unit">Litres · Bottled</div>
+      <div class="product-name">Premium Pack</div>
+    </div>
+    <div class="product-card">
+      <span class="product-bottle">🫙</span>
+      <div class="product-vol">10</div>
+      <div class="product-unit">Litres · Refillable</div>
+      <div class="product-name">Home & Office</div>
+    </div>
+    <div class="product-card">
+      <span class="product-bottle">🛢️</span>
+      <div class="product-vol">18.9</div>
+      <div class="product-unit">Litres · Dispenser</div>
+      <div class="product-name">Dispenser Bottle</div>
+    </div>
+    <div class="product-card">
+      <span class="product-bottle">🚿</span>
+      <div class="product-vol">20</div>
+      <div class="product-unit">Litres · Bulk</div>
+      <div class="product-name">Bulk Commercial</div>
+    </div>
+    <div class="product-card">
+      <span class="product-bottle">🏢</span>
+      <div class="product-vol">HOT &amp;</div>
+      <div class="product-unit">Cold Dispensers</div>
+      <div class="product-name">Office Floor Units</div>
+    </div>
+  </div>
+
+  <div class="brand-note">
+    <strong>Custom Branding Available:</strong> We also brand water for companies and events. Add your logo to any bottle size — perfect for corporate gifting, conferences, and hospitality businesses.
+  </div>
+</section>
+
+<!-- COMPOSITION -->
+<section class="composition" id="composition">
+  <div class="section-tag">Water Analysis</div>
+  <h2 class="section-title">What's in Every Drop</h2>
+  <p class="section-sub">Our water is independently tested with a mineral composition ideal for daily hydration.</p>
+
+  <div class="comp-grid">
+    <div>
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Mineral / Parameter</th>
+            <th>Amount (mg/L)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Chloride</td><td>24.82</td></tr>
+          <tr><td>Fluoride</td><td>0.40</td></tr>
+          <tr><td>Calcium</td><td>38.0</td></tr>
+          <tr><td>Magnesium</td><td>5.40</td></tr>
+          <tr><td>Nitrate</td><td>2.10</td></tr>
+          <tr><td>Sodium</td><td>26.10</td></tr>
+          <tr><td>TDS (Total Dissolved Solids)</td><td>28.0</td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:16px">
+        <span class="ph-badge">pH 7.0 — Perfectly Neutral</span>
+      </div>
+    </div>
+
+    <div class="comp-side">
+      <h3>Why Our Composition Matters</h3>
+      <p>Rahma Ice water carries only the essential naturally occurring minerals your body needs — nothing more. With a TDS of just 28 mg/L, our water is exceptionally light and clean, meeting WHO guidelines for drinking water quality.</p>
+      <p>The perfectly balanced pH of 7.0 means our water is neither acidic nor alkaline — ideal for long-term hydration without any metallic aftertaste.</p>
+
+      <div>
+        <div style="display:flex; justify-content:space-between; font-size:0.82rem; color:var(--text-mid); margin-bottom:6px;">
+          <span>Total Dissolved Solids</span>
+          <span style="font-weight:600; color:var(--ocean)">28 mg/L</span>
+        </div>
+        <div class="tds-bar"><div class="tds-fill"></div></div>
+        <div class="tds-label">Excellent — well below the 500 mg/L WHO guideline</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values" id="values">
+  <div class="section-tag">Our Foundation</div>
+  <h2 class="section-title">Built on Strong Values</h2>
+  <p class="section-sub">Everything we do is driven by a commitment to quality, people, and the planet.</p>
+
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">🎯</div>
+      <h3>Accountability</h3>
+      <p>We take full responsibility for the quality of every bottle we produce and every delivery we make. Our customers rely on us — and we never let them down.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">👥</div>
+      <h3>Customer Focus</h3>
+      <p>Door-to-door delivery isn't just a service — it's a direct feedback loop. We listen to our customers and continuously improve to serve them better.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🤝</div>
+      <h3>Commitment</h3>
+      <p>Substantial resources in both material and time have been committed to building a world-class facility that guarantees supply at any scale, now and in the future.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">💡</div>
+      <h3>Creativity & Innovation</h3>
+      <p>We continuously adopt the most advanced water purification technology available, ensuring we remain the quality standard in coastal Kenya.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">⭐</div>
+      <h3>Professionalism</h3>
+      <p>From our clean, branded delivery vehicles to our certified production process, every detail reflects the high professional standards we hold ourselves to.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🌍</div>
+      <h3>Teamwork & Environment</h3>
+      <p>NEMA certified and environmentally conscious, we pursue sustainable operations that protect Kenya's water resources and natural environment for generations to come.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section class="delivery" id="delivery">
+  <div class="section-tag">Our Service</div>
+  <h2 class="section-title">We Bring Purity<br>to Your Doorstep</h2>
+  <p class="section-sub">Rahma Ice provides door-to-door delivery across the Mombasa region. All we need is your order.</p>
+
+  <div class="delivery-grid">
+    <div>
+      <div class="delivery-feature">
+        <div class="del-icon">🚚</div>
+        <div class="del-content">
+          <h4>Door-to-Door Delivery</h4>
+          <p>We deliver directly to your home, office, or business. Our fleet ensures timely delivery so you never run out of clean water.</p>
+        </div>
+      </div>
+      <div class="delivery-feature">
+        <div class="del-icon">🧹</div>
+        <div class="del-content">
+          <h4>Hygiene Standards</h4>
+          <p>Our vehicles are clean and specifically configured to handle our product according to the required food safety standards.</p>
+        </div>
+      </div>
+      <div class="delivery-feature">
+        <div class="del-icon">💬</div>
+        <div class="del-content">
+          <h4>Direct Customer Feedback</h4>
+          <p>Our door-to-door service gives us direct access to customer feedback, helping us continuously improve our product and service.</p>
+        </div>
+      </div>
+      <div class="delivery-feature">
+        <div class="del-icon">🏢</div>
+        <div class="del-content">
+          <h4>Water Dispensers</h4>
+          <p>We supply countertop and floor-standing Hot & Cold water dispensers — perfect for offices, homes, and commercial spaces.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="vehicle-strip">
+        <h3>Our Delivery Fleet</h3>
+        <p>A mixed fleet of trucks, vans, and motorcycles ensures we can reach every customer — from large bulk orders to quick home replenishments.</p>
+        <div class="vehicles-row">
+          <div class="vehicle-item">🛻 Delivery Trucks</div>
+          <div class="vehicle-item">🚐 Branded Vans</div>
+          <div class="vehicle-item">🛵 Three Motorcycles</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION BANNER -->
+<section class="mission-section">
+  <div class="section-tag" style="justify-content:center">Our Purpose</div>
+  <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); color:white; max-width:800px; margin:0 auto 1.5rem; line-height:1.3;">
+    "To provide reliable and quality water, in order to reduce the global healthy water crisis at a commercial and environmental sustainable level."
+  </h2>
+  <p>Through outstanding processes, cutting-edge technology, and a genuine commitment to our customers — we strive to be the leading water producer throughout the continent.</p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-tag">Get in Touch</div>
+  <h2 class="section-title">Order Water or<br>Make an Enquiry</h2>
+  <p class="section-sub">Ready to experience the taste of purity? Reach out and we'll sort your water needs right away.</p>
+
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3>Rahma Ice Water Company</h3>
+
+      <div class="contact-item">
+        <div class="ci-icon">📍</div>
+        <div class="ci-body">
+          <div class="ci-label">Location</div>
+          <div class="ci-value">22km North of Mombasa City along<br>Mombasa–Malindi Highway, off Sun and Sand Beach Resort</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="ci-icon">📮</div>
+        <div class="ci-body">
+          <div class="ci-label">Postal Address</div>
+          <div class="ci-value">P.O. Box 98962-80100<br>Mombasa, Kenya</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="ci-icon">📞</div>
+        <div class="ci-body">
+          <div class="ci-label">Phone</div>
+          <div class="ci-value">0738 847 777<br>0722 847 777</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="ci-icon">✉️</div>
+        <div class="ci-body">
+          <div class="ci-label">Email</div>
+          <div class="ci-value">rahmaice1@gmail.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Doe">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+254 700 000 000">
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="your@email.com">
+      </div>
+
+      <div class="form-group">
+        <label>Enquiry Type</label>
+        <select>
+          <option>Place a Water Order</option>
+          <option>Request a Dispenser</option>
+          <option>Corporate / Event Branding</option>
+          <option>General Enquiry</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Tell us what you need…"></textarea>
+      </div>
+
+      <button class="submit-btn">Send Message →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Rahma <span>ice</span></div>
+      <div class="footer-tagline">The Taste of Purity</div>
+      <p class="footer-desc">Premium reverse osmosis purified water bottled at source in Mombasa, Kenya. Trusted across the Kenyan Coast for quality, purity, and reliable delivery.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About Us</a>
+      <a href="#process">Our Process</a>
+      <a href="#products">Products</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:0738847777">0738 847 777</a>
+      <a href="tel:0722847777">0722 847 777</a>
+      <a href="mailto:rahmaice1@gmail.com">rahmaice1@gmail.com</a>
+      <a href="#about">P.O. Box 98962-80100</a>
+      <a href="#about">Mombasa, Kenya</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 Rahma Ice Water Limited. All rights reserved.</span>
+    <span>NEMA Certified · ISO Quality Assured · The Taste of Purity</span>
+  </div>
+</footer>
+
+</body>
+</html>
