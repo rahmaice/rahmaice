@@ -710,6 +710,34 @@
   .ci-body { }
   .ci-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 4px; font-weight: 600; }
   .ci-value { font-size: 0.95rem; color: var(--text-dark); font-weight: 500; line-height: 1.5; }
+  .ci-value a { color: var(--ocean); text-decoration: none; font-weight: 600; }
+  .ci-value a:hover { color: var(--deep-blue); text-decoration: underline; }
+
+  .tiktok-icon {
+    background: linear-gradient(135deg, #010101, #69C9D0) !important;
+  }
+
+  .social-bar {
+    display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap;
+  }
+
+  .social-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+    border: none;
+  }
+
+  .social-btn:hover { transform: translateY(-2px); opacity: 0.88; }
+
+  .social-btn.tiktok {
+    background: linear-gradient(135deg, #010101 0%, #69C9D0 100%);
+    color: white;
+  }
 
   .contact-form { background: var(--white); border-radius: 20px; padding: 38px 36px; border: 1px solid rgba(14,100,147,0.1); }
 
@@ -774,8 +802,8 @@
 
   .footer-inner {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
     margin-bottom: 40px;
   }
 
@@ -884,8 +912,7 @@
     <div class="hero-eyebrow fade-up">Kenya's Pure Water Choice</div>
     <h1 class="fade-up delay-1">The Taste of<br><em>Purity</em></h1>
     <p class="hero-sub fade-up delay-2">
-      Premium reverse osmosis purified water bottled at source at Rahma Ice Ltd located 22km North of Mombasa City along the Mombasa–Malindi
-          Highway, off Sun and Sand Beach Resort. Trusted by homes, offices, and businesses across the Kenyan Coast.
+      Premium reverse osmosis purified water bottled at source in Mombasa County. Trusted by homes, offices, and businesses across the Kenyan Coast.
     </p>
     <div class="hero-btns fade-up delay-3">
       <a href="#products" class="btn-primary">Our Products</a>
@@ -1238,6 +1265,30 @@
           <div class="ci-value">rahmaice1@gmail.com</div>
         </div>
       </div>
+
+      <div class="contact-item">
+        <div class="ci-icon tiktok-icon" style="display:flex;align-items:center;justify-content:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+          </svg>
+        </div>
+        <div class="ci-body">
+          <div class="ci-label">TikTok</div>
+          <div class="ci-value">
+            <a href="https://www.tiktok.com/@rahmaice" target="_blank" rel="noopener noreferrer">@rahmaice</a>
+            <br><span style="font-size:0.8rem; color:var(--text-light);">Follow us for updates & promotions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-bar">
+        <a href="https://www.tiktok.com/@rahmaice" target="_blank" rel="noopener noreferrer" class="social-btn tiktok">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+          </svg>
+          Follow us on TikTok
+        </a>
+      </div>
     </div>
 
     <div class="contact-form">
@@ -1310,7 +1361,14 @@
       <a href="#about">P.O. Box 98962-80100</a>
       <a href="#about">Mombasa, Kenya</a>
     </div>
-  </div>
+
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <a href="https://www.tiktok.com/@rahmaice" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:8px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+        TikTok · @rahmaice
+      </a>
+    </div>
 
   <div class="footer-bottom">
     <span>© 2025 Rahma Ice Water Limited. All rights reserved.</span>
