@@ -912,7 +912,7 @@
     <div class="hero-eyebrow fade-up">Kenya's Pure Water Choice</div>
     <h1 class="fade-up delay-1">The Taste of<br><em>Purity</em></h1>
     <p class="hero-sub fade-up delay-2">
-      Premium reverse osmosis purified water bottled at source  located 22km North of Mombasa City along the Mombasa–Malindi Highway, off Sun and Sand Beach Resort. Trusted by homes, offices, and businesses across the Kenyan Coast.
+      Premium reverse osmosis purified water bottled at source in Mombasa County. Trusted by homes, offices, and businesses across the Kenyan Coast.
     </p>
     <div class="hero-btns fade-up delay-3">
       <a href="#products" class="btn-primary">Our Products</a>
@@ -1294,30 +1294,40 @@
     <div class="contact-form">
       <h3>Send Us a Message</h3>
 
+      <!-- Success Message -->
+      <div id="form-success" style="display:none; background:#d4edda; border:1px solid #c3e6cb; border-radius:12px; padding:18px 20px; margin-bottom:18px; color:#155724; font-size:0.92rem; line-height:1.6;">
+        ✅ <strong>Message sent successfully!</strong><br>We have received your message and will get back to you shortly on your phone or email.
+      </div>
+
+      <!-- Error Message -->
+      <div id="form-error" style="display:none; background:#f8d7da; border:1px solid #f5c6cb; border-radius:12px; padding:18px 20px; margin-bottom:18px; color:#721c24; font-size:0.92rem; line-height:1.6;">
+        ❌ <strong>Sending failed.</strong> Please try WhatsApp instead using the button below, or call us directly.
+      </div>
+
       <div class="form-row">
         <div class="form-group">
-          <label>First Name</label>
-          <input type="text" placeholder="John">
+          <label>First Name *</label>
+          <input type="text" id="first-name" placeholder="John" required>
         </div>
         <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" placeholder="Doe">
+          <label>Last Name *</label>
+          <input type="text" id="last-name" placeholder="Doe" required>
         </div>
       </div>
 
       <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" placeholder="+254 700 000 000">
+        <label>Phone Number *</label>
+        <input type="tel" id="phone" placeholder="+254 700 000 000" required>
       </div>
 
       <div class="form-group">
         <label>Email Address</label>
-        <input type="email" placeholder="your@email.com">
+        <input type="email" id="email" placeholder="your@email.com">
       </div>
 
       <div class="form-group">
-        <label>Enquiry Type</label>
-        <select>
+        <label>Enquiry Type *</label>
+        <select id="enquiry-type">
           <option>Place a Water Order</option>
           <option>Request a Dispenser</option>
           <option>Corporate / Event Branding</option>
@@ -1326,14 +1336,130 @@
       </div>
 
       <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Tell us what you need…"></textarea>
+        <label>Message *</label>
+        <textarea id="message" placeholder="Tell us what you need…" required></textarea>
       </div>
 
-      <button class="submit-btn">Send Message →</button>
+      <!-- Send via Email Button -->
+      <button class="submit-btn" id="send-email-btn" onclick="sendEmail()">
+        📧 Send Message to Email →
+      </button>
+
+      <!-- Divider -->
+      <div style="text-align:center; margin:16px 0; color:var(--text-light); font-size:0.82rem; font-weight:600; letter-spacing:0.08em;">— OR —</div>
+
+      <!-- Send via WhatsApp Button -->
+      <button onclick="sendWhatsApp()" style="width:100%; background:#25D366; color:white; border:none; border-radius:12px; padding:14px; font-size:0.95rem; font-weight:600; cursor:pointer; font-family:'DM Sans',sans-serif; letter-spacing:0.02em; transition:background 0.25s; display:flex; align-items:center; justify-content:center; gap:10px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Send via WhatsApp
+      </button>
+
+      <p style="font-size:0.75rem; color:var(--text-light); text-align:center; margin-top:12px;">
+        WhatsApp: <strong>+254 750 222 666</strong> · Email: <strong>rahmaice1@gmail.com</strong>
+      </p>
     </div>
   </div>
 </section>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // ── EmailJS Initialisation ──
+  // SETUP INSTRUCTIONS (one-time, takes 5 minutes):
+  // 1. Go to https://www.emailjs.com and sign up FREE
+  // 2. Click "Add New Service" → choose Gmail → connect rahmaice1@gmail.com
+  // 3. Note your SERVICE ID (e.g. service_xxxxxxx)
+  // 4. Click "Email Templates" → "Create New Template"
+  // 5. Set template subject: "New Enquiry from Rahma Ice Website"
+  // 6. Set template body:
+  //    Name: {{from_name}}
+  //    Phone: {{phone}}
+  //    Email: {{reply_to}}
+  //    Enquiry: {{enquiry_type}}
+  //    Message: {{message}}
+  // 7. Note your TEMPLATE ID (e.g. template_xxxxxxx)
+  // 8. Go to "Account" → copy your PUBLIC KEY
+  // 9. Replace the three values below with your actual IDs
+
+  const EMAILJS_PUBLIC_KEY  = "axXLDM51V-O4zDm9W";   // ← replace this
+  const EMAILJS_SERVICE_ID  = "service_5nxbvlh";   // ← replace this
+  const EMAILJS_TEMPLATE_ID = "template_hrcmdy9";  // ← replace this
+
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  function getFormData() {
+    return {
+      firstName:   document.getElementById('first-name').value.trim(),
+      lastName:    document.getElementById('last-name').value.trim(),
+      phone:       document.getElementById('phone').value.trim(),
+      email:       document.getElementById('email').value.trim(),
+      enquiryType: document.getElementById('enquiry-type').value,
+      message:     document.getElementById('message').value.trim()
+    };
+  }
+
+  function validateForm(data) {
+    if (!data.firstName || !data.lastName || !data.phone || !data.message) {
+      alert('Please fill in all required fields (First Name, Last Name, Phone, Message).');
+      return false;
+    }
+    return true;
+  }
+
+  function sendEmail() {
+    const data = getFormData();
+    if (!validateForm(data)) return;
+
+    const btn = document.getElementById('send-email-btn');
+    btn.textContent = '⏳ Sending…';
+    btn.disabled = true;
+
+    const templateParams = {
+      from_name:    data.firstName + ' ' + data.lastName,
+      phone:        data.phone,
+      reply_to:     data.email || 'Not provided',
+      enquiry_type: data.enquiryType,
+      message:      data.message
+    };
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+      .then(() => {
+        document.getElementById('form-success').style.display = 'block';
+        document.getElementById('form-error').style.display   = 'none';
+        btn.textContent = '✅ Message Sent!';
+        btn.style.background = '#28a745';
+        // Clear form
+        ['first-name','last-name','phone','email','message'].forEach(id => {
+          document.getElementById(id).value = '';
+        });
+      })
+      .catch(() => {
+        document.getElementById('form-error').style.display   = 'block';
+        document.getElementById('form-success').style.display = 'none';
+        btn.textContent = '📧 Send Message to Email →';
+        btn.disabled = false;
+      });
+  }
+
+  function sendWhatsApp() {
+    const data = getFormData();
+    if (!validateForm(data)) return;
+
+    const text = encodeURIComponent(
+      `*New Enquiry – Rahma Ice Website*\n\n` +
+      `*Name:* ${data.firstName} ${data.lastName}\n` +
+      `*Phone:* ${data.phone}\n` +
+      `*Email:* ${data.email || 'Not provided'}\n` +
+      `*Enquiry Type:* ${data.enquiryType}\n` +
+      `*Message:* ${data.message}`
+    );
+
+    // Opens WhatsApp with the message pre-filled
+    window.open(`https://wa.me/254750222666?text=${text}`, '_blank');
+  }
+</script>
 
 <!-- FOOTER -->
 <footer>
